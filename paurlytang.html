@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PaurlyTang | Video Editor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:white;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,#d4af37 0%, transparent 70%);
+    opacity:0.12;
+    top:-100px;
+    right:-100px;
+    pointer-events:none;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(12px);
+    z-index:999;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#d4af37;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#d4af37;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#d4af37;
+}
+
+.hero p{
+    font-size:20px;
+    color:#bbb;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#d4af37;
+    color:black;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:700;
+}
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:40px;
+    color:#d4af37;
+}
+
+.about p{
+    color:#b8b8b8;
+    font-size:18px;
+    max-width:800px;
+    line-height:1.8;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    transition:0.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#d4af37;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#d4af37;
+}
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+    position:relative;
+    height:220px;
+    border-radius:20px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#1e1e1e,#303030);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.4s;
+}
+
+.project:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    color:#d4af37;
+    font-size:24px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#bdbdbd;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:#666;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">PaurlyTang</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>I Craft Stories Through <span>Editing</span></h1>
+        <p>
+            Professional video editor specializing in cinematic storytelling,
+            commercials, short films, and social media content.
+        </p>
+        <a class="btn" href="#works">View My Works</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        Hi, I'm PaurlyTang, a professional video editor passionate about storytelling.
+        I believe editing is more than cutting clips—it is about rhythm, emotion,
+        and creating unforgettable visual experiences.
+    </p>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services">
+     <a class="fcc-btn" href="https://drive.google.com/drive/folders/1qNcQreik16oXA-yrz9xmFzqaIiK8IDJl">
+       
+        <div class="card">
+            <h3>Film Editing</h3>
+            <p>Cinematic pacing and emotional storytelling.</p>
+        </div>   
+        </a>
+        <div class="card">
+            <h3>Commercial Editing</h3>
+            <p>Brand visuals that capture attention instantly.</p>
+        </div>
+        <div class="card">
+            <h3>Short-form Content</h3>
+            <p>Reels, TikTok, Shorts with strong retention.</p>
+        </div>
+    </div>
+</section>
+
+<section id="works">
+    <h2 class="section-title">Featured Works</h2>
+    <div class="portfolio">
+        <div class="project">
+            <div class="overlay"><h3>Short Film</h3></div>
+        </div>
+        <div class="project">
+            <div class="overlay"><h3>Commercial</h3></div>
+        </div>
+        <div class="project">
+            <div class="overlay"><h3>Music Video</h3></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <p>Instagram: @paurlytang</p>
+    <p>WhatsApp: +60 xxxx xxxx</p>
+</section>
+
+<footer>
+    © 2026 PaurlyTang — Video Editor Portfolio
+</footer>
+
+</body>
+</html>
